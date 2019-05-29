@@ -1,0 +1,545 @@
+body{	grid-template-columns: 100%;
+        grid-template-rows: 80px 300px 100px auto auto auto auto auto auto;
+    display:grid;
+    margin:0; font:100% sans-serif;
+    scroll-behavior: smooth;}
+
+   aside, footer{ padding:1em; }
+    
+    header { grid-column: 1/2; grid-row: 1/2; z-index: 99;}
+    
+    .hd_fix{
+        position: fixed;   height: 81px;    margin:0; 
+        width: 100%;      background-color: #fff; 
+    }
+    header img{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 55px;
+    }
+    h2{ position: absolute;
+        color: rgb(107, 69, 61);
+        size: 2em;
+        font-family: 'Ubuntu Condensed', sans-serif; 
+        left: 90px; letter-spacing: 10px;   line-height: 26px;
+        top: 2px;
+    }
+    .headNav {  
+        grid-column: 1/2; grid-row: 2/3;
+        position: relative;  
+        font-family: 'Ubuntu Condensed', sans-serif; 
+        width: 100%;  
+        font-size: 1em;     
+        }  
+        .headNav ul  { list-style: none; }
+        .headNav li  { margin: 0 18px 0 -18px; 
+            border-bottom: 1px solid rgb(235, 235, 235); padding: 10px 0 31px;
+            transition:all .3s; }
+        .headNav li:hover{ border-bottom: 1px solid #ccc;
+            padding: 10px 0 31px 10px;
+        }
+        .headNav li a{ text-align: right;    text-decoration: none;
+            color: rgb(107, 69, 61);     
+        }
+
+        aside 	{grid-column: 1/2; grid-row: 3/4; }
+        aside p{ 
+            left: 0; width: 250px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top: -20px;
+            font-size: 2.5em;       font-weight: bold;  letter-spacing: 0.2em;
+            text-decoration: underline; line-height: 40px;
+            z-index: 1;
+        }
+    main 	{grid-column: 1/2; grid-row: 4/5; }
+    
+    main .v_container{
+        position: relative;
+        top: 35px; z-index: -1;
+    }
+    main video{
+        width: 100%;
+    }
+   
+    footer 	{grid-column: 1/2; grid-row: 5/6; padding: 120px 0 0;}
+    .gallery{ margin: 0; width: 240px;       margin: 0 auto;}
+        .gallery ol{ list-style:none; margin: 0;
+            padding:0;}
+        .gallery li{
+             width: 240px; 
+            height:158px;       overflow:hidden;
+        }
+        .gallery li img{  transition:all .5s; z-index: -10; }
+        .gallery li:hover img{ transform:translateX(-260px); }
+        .gallery li:last-child { margin-bottom: 10%; }
+        .sm_t{  margin:30px 0 20px;
+            font-family: 'Ubuntu Mono', monospace;
+            font-weight: bold;
+            z-index: 99; font-size: 0.8em;  text-align: center; 
+        }
+        .sm_ct{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; line-height: 1.5em;
+        }
+        #line{
+            margin:30px auto 70px;
+            width: 120px;   top: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+    #footM{ grid-column: 1/2; grid-row: 6/7;
+    padding: 0 40px ; margin: 20px 0 0;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    
+    }
+    .mid_img{ margin: 0 auto;
+        width: 100%;  transition:all .2s; 
+        margin-bottom: 1em; opacity: 1; 
+    }
+    .mid_img:hover{ opacity: 0.9;  width: 100%;
+    }
+    
+    #footL{ 
+        grid-column: 1/2; grid-row: 7/8;
+        position: relative;  
+        overflow:hidden; z-index:1; 
+    }
+    #footL_bx{ margin:20px 40px 50px; }
+        .outer { overflow: hidden; }
+          .inner { border: 1px solid #ccc; }
+          .inner i { width: 60px; height: 60px; border: 1px solid #ccc; border-radius: 50%; background-color: #fff; }
+          .inner .top { margin-top: -30px; }
+          .inner .bottom { margin-top: -30px; margin-bottom: -36px; }
+          .inner .left { float: left; margin-left: -30px; }
+          .inner .right { float: right; margin-right: -30px; }
+          .content { min-height: 700px; 
+        }
+    
+    #ftL_t{
+        font-family: 'Ubuntu Mono', monospace;
+        font-weight: bold;
+        z-index: 99;
+        font-size: 1.1em;     text-align: center;
+    }
+    #leaf_p{
+        width: 50px; margin: 30px 55% 25px 43%;
+    }
+    .outer p{
+        margin:20px 40px;  
+    }
+    .cont{ text-align: justify;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; line-height: 1.7em;
+    }
+   
+    .bott{ position: relative;
+        grid-column: 1/2; grid-row: 8/9;
+        margin:0;
+        height: 8em;
+        background-color: rgb(21, 24, 22);
+        scroll-behavior: smooth;
+    }
+    #tractor{
+        position: absolute; width: 40px;
+			top: -30px; left: 10px;
+			animation: moveit 20s linear forwards;
+            -webkit-animation: moveit 20s linear forwards;
+            animation-iteration-count: infinite alternate;
+		}
+		@keyframes moveit{ 0%{left: 10px;} 50%{left: 90%;} 100%{left: 10px;} }
+        @-webkit-keyframes moveit{ 0%{left: 10px;} 50%{left: 90%;} 100%{left: 10px;} }
+    .bott ul{
+        list-style: none; 
+        margin: 35px 0 0 28% ;
+        padding: 0;
+    }
+    .bott li{
+        float: left;
+    }
+    .bott a{
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+    }
+    .bott a[href="#1"] {
+            background: url(src/sns-assets/sns.png) no-repeat -50px -50px;/*horizontal vertical*/
+            overflow: hidden;
+        }
+    .bott a[href="#1"]:hover {
+            background: url(src/sns-assets/sns.png) no-repeat -50px 0;
+            overflow: hidden;
+        }
+    .bott a[href="#2"] {
+            background: url(src/sns-assets/sns.png) no-repeat -100px -50px;/*horizontal vertical*/
+            overflow: hidden;
+        }
+    .bott a[href="#2"]:hover {
+            background: url(src/sns-assets/sns.png) no-repeat -100px 0;
+            overflow: hidden;
+        }
+    .bott a[href="#3"] {
+            background: url(src/sns-assets/sns.png) no-repeat -150px -50px;/*horizontal vertical*/
+            overflow: hidden;
+        }
+    .bott a[href="#3"]:hover {
+            background: url(src/sns-assets/sns.png) no-repeat -150px 0;
+            overflow: hidden;
+        }
+    .bott a[href="#4"] {
+            background: url(src/sns-assets/sns.png) no-repeat -200px -50px;/*horizontal vertical*/
+            overflow: hidden;
+        }
+    .bott a[href="#4"]:hover {
+            background: url(src/sns-assets/sns.png) no-repeat -200px 0;
+            overflow: hidden;
+        }
+    /* #sns{ width: 200px;
+        position: absolute;
+        top: 40px;  margin: 0 0 0 30%;
+        vertical-align: middle;
+    } */
+
+
+/********************************/
+@media screen and (min-width: 660px){ 
+    body {  grid-template-columns: 40% 60%;
+            grid-template-rows:80px 540px auto auto; 
+            }
+
+    header{ grid-column: 1/3; grid-row: 1/2;
+        z-index: 9;
+    }
+    .hd_fix{
+        position: fixed;   height: 81px;    margin:0;
+        width: 100%;      background-color: #fff; 
+    }
+    header img{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 55px;
+    }
+    h2{ position: absolute;
+        color: rgb(107, 69, 61);
+        size: 2em;
+        font-family: 'Ubuntu Condensed', sans-serif; 
+        left: 90px; letter-spacing: 10px;   line-height: 26px;
+        top: 2px;
+    }
+    .headNav {   
+        grid-column: 1/3; grid-row: 1/2;
+        position: fixed;     right: 40px;  top: 15px; 
+        font-family: 'Ubuntu Condensed', sans-serif; 
+        width: 100%;             z-index: 99;
+        font-size: 1em;     
+        }  
+        .headNav ul  { list-style: none; float: right;}
+            .headNav li  { margin: 0 15px 0; float: left; 
+                border-bottom: 1px solid rgb(235, 235, 235); padding: 0 0 31px;
+                transition:all .3s; }
+            .headNav li:hover{ border-bottom: 1px solid #ccc;
+                padding: 3px 0 25px;
+            }
+            .headNav li a{  text-decoration: none;
+                color: rgb(107, 69, 61);     
+        }
+    main 	{grid-column: 1/3; grid-row: 2/3; position: relative;}
+    
+     
+        main .v_container{
+            margin: 0; top: 50px;
+          }
+          main video{
+              position: absolute;
+              top: 25px;
+              margin-left: 12%;
+              width: 700px;
+          }
+        
+          aside{ grid-column: 1/3; grid-row: 2/3;
+              position: relative; 
+          }
+      
+          aside p{ 
+              position: absolute;  left: 50px;  width: 300px;
+              font-family: 'Ubuntu', sans-serif;  margin-top: 80px;
+              font-size: 4em;    font-weight: bold;  letter-spacing: 0.2em;
+              text-decoration: underline; line-height: 80px;
+          }
+          #mainline{ grid-column: 1/3; position: absolute;  margin: 0 3%; width: 94%;  top: 600px; border-bottom: 1px solid rgb(221, 221, 221); }
+    
+    footer{
+            grid-column: 1/2; grid-row: 3/4; 
+            position: relative; 
+            padding: 20px 0 ;
+        }
+        .gallery{ width: 240px;       margin: 0 auto;}
+        .gallery ol{ list-style:none; margin: 0;
+            padding:0;}
+        .gallery li{
+             width: 240px; 
+            height:158px;       overflow:hidden;
+        }
+        .gallery li img{  transition:all .5s; z-index: -10; }
+        .gallery li:hover img{ transform:translateX(-260px); }
+        .gallery li:last-child { margin-bottom: 10%; }
+        .sm_t{  margin:30px 0 20px;
+            font-family: 'Ubuntu Mono', monospace;
+            font-weight: bold;
+            z-index: 99; font-size: 0.8em;  text-align: center; 
+        }
+        .sm_ct{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; line-height: 1.5em;
+        }
+        #line{
+            margin:30px auto 70px;
+            width: 120px;   top: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+    #footM{ margin: 20px 0 0;
+            grid-column: 2/3; grid-row: 3/4;
+            padding: 0 40px ;
+         border-left: 1px solid #ccc;
+         border-right: 1px solid #fff;
+        }
+        .mid_img{ margin: 0 auto;
+            width: 100%;  transition:all .2s; 
+            margin-bottom: 1em; opacity: 1; 
+        }
+        .mid_img:hover{ opacity: 0.9;  width: 100%;
+        }
+        
+    #footL{ 
+        grid-column: 1/3; grid-row: 4/5;
+        position: relative;  
+        overflow:hidden; z-index:1; 
+    }
+
+    #footL_bx{ margin:20px 50px 50px; }
+    .outer { overflow: hidden; }
+      .inner { border: 1px solid #ccc; }
+      .inner i { width: 60px; height: 60px; border: 1px solid #ccc; border-radius: 50%; background-color: #fff; }
+      .inner .top { margin-top: -30px; }
+      .inner .bottom { margin-top: -30px; margin-bottom: -36px; }
+      .inner .left { float: left; margin-left: -30px; }
+      .inner .right { float: right; margin-right: -30px; }
+      .content { min-height: 600px; 
+    }
+
+    #ftL_t{
+        font-family: 'Ubuntu Mono', monospace;
+        font-weight: bold;
+        z-index: 99;
+        font-size: 1.1em;     text-align: center;
+    }
+    #leaf_p{
+        width: 50px; margin: 30px 55% 25px 45%;
+    }
+    .outer p{
+        margin:20px 50px;  
+    }
+    .cont{ text-align: justify;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; line-height: 1.7em;
+    }
+
+    .bott{ position: relative;
+        grid-column: 1/3; grid-row: 5/6; 
+        margin:0;
+        height: 8em;
+        background-color: rgb(21, 24, 22);
+        scroll-behavior: smooth;
+    }
+    #tractor{
+        position: absolute; width: 40px;
+            top: -30px; left: 10px;
+            animation: moveit 30s linear forwards;
+            -webkit-animation: moveit 30s linear forwards;
+            animation-iteration-count: infinite alternate;
+        }
+        @keyframes moveit{ 0%{left: 10px;} 50%{left: 95%;} 100%{left: 10px;} }
+        @-webkit-keyframes moveit{ 0%{left: 10px;} 50%{left: 95%;} 100%{left: 10px;} }
+    
+    .bott ul{
+        list-style: none; 
+        margin: 35px 0 0 37% ;
+        padding: 0;
+    }
+    
+}
+/********************* Widest part *******************/
+@media screen and (min-width: 980px){ 
+    body {  grid-template-columns: 25% 35% 20% 20%;
+        grid-template-rows:80px 540px auto auto; 
+       
+    }
+
+    header{ grid-column: 1/5; grid-row: 1/2;
+            z-index: 99;
+    }
+    .hd_fix{
+        position: fixed;   height: 81px;    
+        width: 100%;      background-color: #fff; 
+    }
+    header img{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 55px;
+    }
+    h2{ position: absolute;
+        color: rgb(107, 69, 61);
+        size: 2em;
+        font-family: 'Ubuntu Condensed', sans-serif; 
+        left: 90px; letter-spacing: 10px;   line-height: 26px;
+        top: 2px;
+    }
+    .headNav {   
+        grid-column: 1/5; grid-row: 1/2;
+        position: fixed;     right: 40px;  top: 15px; 
+            font-family: 'Ubuntu Condensed', sans-serif; 
+            width: 100%;             z-index: 99;
+            font-size: 1em;     
+    }  
+    .headNav ul  { list-style: none; float: right;}
+            .headNav li  { margin: 0 15px 0; float: left; 
+            border-bottom: 1px solid rgb(235, 235, 235); padding: 0 0 31px;
+            transition:all .3s; }
+        .headNav li:hover{ border-bottom: 1px solid #ccc;
+            padding: 3px 0 25px;
+        }
+        .headNav li a{ text-align: right;    text-decoration: none;
+            color: rgb(107, 69, 61);     
+    }
+    
+    main{ grid-column: 1/4; grid-row: 2/3; 
+        color: #fff;
+        font: 100% Roboto, sans-serif;
+        overflow: hidden;
+    }
+  
+    main .v_container{
+      margin: 0; top: 50px;
+    }
+    main video{
+        position: absolute;
+        top: 25px;
+        margin-left: 19%;
+        width: 700px;
+    }
+    #mainline{ grid-column: 1/5; position: absolute;  margin: 0 3%; width: 94%;  top: 600px; border-bottom: 1px solid rgb(221, 221, 221); }
+    
+    aside{ grid-column: 4/5; grid-row: 2/3;
+        position: relative; 
+    }
+
+    aside p{ 
+        position: absolute;  left: -230px; width: 300px;
+        
+        font-family: 'Ubuntu', sans-serif;  
+        margin-top: 80px;
+        font-size: 4.5em;       font-weight: bold;  letter-spacing: 0.2em;
+        text-decoration: underline; line-height: 80px;
+    }
+    footer{
+        grid-column: 1/2; grid-row: 3/4; 
+        position: relative; 
+        padding: 20px 0 ;
+    }
+    .gallery{ width: 240px;       margin: 0 auto;}
+    .gallery ol{ list-style:none; margin: 0;
+        padding:0;}
+    .gallery li{
+         width: 240px; 
+        height:158px;       overflow:hidden;
+    }
+    .gallery li img{  transition:all .5s; z-index: -10; }
+    .gallery li:hover img{ transform:translateX(-260px); }
+    .gallery li:last-child { margin-bottom: 10%; }
+    .sm_t{  margin:30px 0 20px;
+        font-family: 'Ubuntu Mono', monospace;
+        font-weight: bold;
+        z-index: 99; font-size: 0.8em;  text-align: center; 
+    }
+    .sm_ct{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; line-height: 1.5em;
+    }
+    #line{
+        margin:30px auto 70px;
+        width: 120px;   top: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    #footM{ margin: 20px 0 50px;
+        grid-column: 2/3; grid-row: 3/4;
+        padding: 0 40px;
+     border-left: 1px solid #ccc;
+     border-right: 1px solid #ccc;
+    }
+    .mid_img{ margin: 0 auto;
+        width: 100%;  transition:all .2s; 
+        margin-bottom: 1em; opacity: 1; 
+    }
+    .mid_img:hover{ opacity: 0.9;  width: 100%;
+    }
+    /* #mid_image { width: 100%; margin: 0; 
+        background: url(src/greenLeaf-assets/greenLeaf.png) no-repeat; background-size: 100%; transition:all .2s ;
+    }
+    #mid_image:hover { background: url(src/greenLeaf-assets/greenLeaf_wh.png) no-repeat; background-size: 100%; overflow: hidden;}
+  */
+    #footL{ 
+        grid-column: 3/5; grid-row: 3/4;
+        position: relative;  
+        overflow:hidden; z-index:1; 
+    }
+    
+    #footL_bx{ margin:20px 40px 50px; }
+        .outer { overflow: hidden; }
+          .inner { border: 1px solid #ccc; }
+          .inner i { width: 60px; height: 60px; border: 1px solid #ccc; border-radius: 50%; background-color: #fff; }
+          .inner .top { margin-top: -30px; }
+          .inner .bottom { margin-top: -30px; margin-bottom: -36px; }
+          .inner .left { float: left; margin-left: -30px; }
+          .inner .right { float: right; margin-right: -30px; }
+          .content { min-height: 700px; 
+        }
+    
+    #ftL_t{
+        font-family: 'Ubuntu Mono', monospace;
+        font-weight: bold;
+        z-index: 99;
+        font-size: 1.1em;     text-align: center;
+    }
+    #leaf_p{
+        width: 50px; margin: 30px 55% 25px 45%;
+    }
+    .outer p{
+        margin:20px 30px;  
+    }
+    .cont{ text-align: justify;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; line-height: 1.7em;
+    }
+
+    .bott{ position: relative;
+        grid-column: 1/5; grid-row: 4/5; 
+        margin:0;
+        height: 8em;
+        background-color: rgb(21, 24, 22);
+        scroll-behavior: smooth;
+    }
+    #tractor{
+        position: absolute; width: 40px;
+			top: -30px; left: 10px;
+			animation: moveit 30s linear forwards;
+            -webkit-animation: moveit 30s linear forwards;
+            animation-iteration-count: infinite alternate;
+		}
+		@keyframes moveit{ 0%{left: 10px;} 50%{left: 95%;} 100%{left: 10px;} }
+		@-webkit-keyframes moveit{ 0%{left: 10px;} 50%{left: 95%;} 100%{left: 10px;} }
+    
+    .bott ul{
+        list-style: none; 
+        margin: 35px 0 0 40% ;
+        padding: 0;
+    }
+}
